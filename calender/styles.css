@@ -1,0 +1,193 @@
+/* body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f3f4f6;
+  }
+  
+  .calendar-container {
+    width: 100%;
+    max-width: 900px;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .calendar-header h1 {
+    margin: 0;
+    font-size: 24px;
+  }
+  
+  .calendar-header h3 {
+    margin: 5px 0 20px;
+    color: gray;
+  }
+  
+  .navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .navigation button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  
+  .navigation button:hover {
+    background-color: #0056b3;
+  }
+  
+  #month-year {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .calendar {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .days, .dates {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+  }
+  
+  .days div {
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  .dates div {
+    height: 100px;
+    border: 1px solid #ddd;
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .dates div span {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background: #007bff;
+    color: white;
+    border-radius: 4px;
+    padding: 2px 6px;
+    font-size: 12px;
+  }
+  
+  .dates div:hover {
+    background-color: #f1f5f9;
+  }
+   */
+
+   body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f3f4f6;
+  }
+  
+  .calendar-container {
+    width: 100%;
+    max-width: 1200px; /* Reduced width */
+    background: white;
+    padding: 15px; /* Reduced padding */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .calendar-header h1 {
+    margin: 0;
+    font-size: 18px; /* Reduced font size */
+  }
+  
+  .calendar-header h3 {
+    margin: 5px 0 15px;
+    color: gray;
+    font-size: 14px; /* Reduced font size */
+  }
+  
+  .navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  
+  .navigation button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 3px 8px; /* Smaller buttons */
+    font-size: 12px; /* Smaller text */
+    cursor: pointer;
+  }
+  
+  .navigation button:hover {
+    background-color: #0056b3;
+  }
+  
+  #month-year {
+    font-size: 16px; /* Smaller font size */
+    font-weight: bold;
+  }
+  
+  .calendar {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .days, .dates {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 3px; /* Reduced gap */
+  }
+  
+  .days div {
+    font-weight: bold;
+    text-align: center;
+    font-size: 12px; /* Smaller font size */
+  }
+  
+  .dates div {
+    height: 60px; /* Reduced height */
+    border: 1px solid #ddd;
+    text-align: center;
+    font-size: 10px; /* Smaller font size */
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .dates div span {
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    background: #007bff;
+    color: white;
+    border-radius: 4px;
+    padding: 2px 4px; /* Smaller event bubble */
+    font-size: 10px; /* Reduced font size */
+  }
+  
+  .dates div:hover {
+    background-color: #f1f5f9;
+  }
+  
