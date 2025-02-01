@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="logo">
+                <h2>Dashboard</h2>
+            </div>
+            <ul class="menu">
+                <li class="active"><span>🏠</span> Dashboard</li>
+                <li><span>📁</span> Reports</li>
+                <li><span>👥</span> Users</li>
+                <li><span>⚙️</span> Settings</li>
+            </ul>
+            <button class="toggle-sidebar">☰</button>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <div class="header">
+                <h1>Welcome, User</h1>
+                <input type="text" class="search-bar" placeholder="Search...">
+            </div>
+
+            <div class="content">
+                <div class="widgets">
+                    <div class="widget">
+                        <h3>Total Users</h3>
+                        <p id="userCount">Loading...</p>
+                    </div>
+                    <div class="widget">
+                        <h3>Reports</h3>
+                        <p id="reportCount">Loading...</p>
+                    </div>
+                    <div class="widget">
+                        <h3>Notifications</h3>
+                        <p id="notifCount">Loading...</p>
+                    </div>
+                </div>
+
+                <div class="chart-section">
+                    <h3>Activity Overview</h3>
+                    <canvas id="dashboardChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
