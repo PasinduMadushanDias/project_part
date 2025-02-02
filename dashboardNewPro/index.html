@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="dashboard">
+        <header>
+            <div class="above">
+                <i class="fa-solid fa-gauge" style="font-size: 40px;"></i>
+                <h2><b>Dashboard</b></h2>
+            </div>
+        </header>
+
+        <!-- Stats Section -->
+        <div class="stats">
+            <a href="/PDC/ManageCompany">
+                <div class="stat">
+                    <h2>15</h2>
+                    <p>Companies Registered</p>
+                </div>
+            </a>
+            <a href="/company/appliedStudent">
+                <div class="stat">
+                    <h2>320</h2>
+                    <p>Applied Students</p>
+                </div>
+            </a>
+            <a href="/PDC/Advertisements">
+                <div class="stat">
+                    <h2>20</h2>
+                    <p>Advertisements</p>
+                </div>
+            </a>
+        </div>
+
+        <!-- Charts Section -->
+        <div class="charts">
+            <div class="chart-container">
+                <h3>Internship Placements</h3>
+                <canvas id="barChart"></canvas>
+            </div>
+            <div class="chart-container">
+                <h3>Job Roles</h3>
+                <canvas id="donutChart"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
