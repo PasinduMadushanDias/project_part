@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Generator</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            animation: fadeIn 1.5s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        form {
+            background: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            transform: scale(1);
+            transition: transform 0.3s ease-in-out;
+            width: 400px;
+            margin-top: 20px;
+        }
+        form:hover {
+            transform: scale(1.05);
+        }
+        input {
+            display: block;
+            width: 100%;
+            margin-bottom: 15px;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        button {
+            background: #ff7eb3;
+            color: white;
+            padding: 14px;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            border-radius: 5px;
+            font-size: 18px;
+            transition: background 0.3s;
+        }
+        button:hover {
+            background: #ff5277;
+        }
+        #qrcode {
+            margin-top: 30px;
+            animation: popIn 0.5s ease-in-out;
+        }
+        @keyframes popIn {
+            from {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+<body>
+    <h2 style="color: white; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); font-size: 28px;">QR Code Generator</h2>
+    <form id="qrForm">
+        <input type="text" id="name" placeholder="Enter Name" required>
+        <input type="email" id="email" placeholder="Enter Email" required>
+        <input type="text" id="contact" placeholder="Enter Contact No" required>
+        <input type="text" id="studentId" placeholder="Enter Student ID" required>
+        <button type="submit">Generate QR Code</button>
+    </form>
+    <div id="qrcode"></div>
+
+    <script>
+        document.getElementById("qrForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            
+            let name = document.getElementById("name").value;
+            let email = document.getElementById("email").value;
+            let contact = document.getElementById("contact").value;
+            let studentId = document.getElementById("studentId").value;
+            
+            let qrData = `Name: ${name}\nEmail: ${email}\nContact: ${contact}\nStudent ID: ${studentId}`;
+            
+            document.getElementById("qrcode").innerHTML = ""; // Clear previous QR code
+            new QRCode(document.getElementById("qrcode"), {
+                text: qrData,
+                width: 200,
+                height: 200
+            });
+        });
+    </script>
+</body>
+</html>
