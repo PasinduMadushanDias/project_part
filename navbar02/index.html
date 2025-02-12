@@ -1,9 +1,73 @@
-h1 Hover or Click on the links
-ul.bar
-  - for (var c = 0; c < 4; c++)
-    li
-      - var link = "#";
-      - var title = "Click me";
-      - var name = "Link";
-      a(href=link title=title) #{name}
-      
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sidebar Menu</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .sidebar {
+            width: 250px;
+            height: 100vh;
+            background: #f8f8f8;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 20px;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+        }
+        .menu-item {
+            width: 200px;
+            padding: 10px;
+            margin: 10px 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 10px;
+            border: 2px solid #8000ff;
+            text-decoration: none;
+            color: #8000ff;
+            text-align: center;
+            justify-content: center;
+            transition: 0.3s;
+        }
+        .menu-item i {
+            font-size: 20px;
+        }
+        .menu-item:hover, .menu-item.active {
+            background: #8000ff;
+            color: white;
+        }
+        .bottom-profile {
+            margin-top: auto;
+            width: 100%;
+            background: #ddd;
+            text-align: center;
+            padding: 15px 0;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .bottom-profile i {
+            margin-right: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <a href="#" class="menu-item"><i class="fa fa-home"></i> Home</a>
+        <a href="#" class="menu-item"><i class="fa fa-plus-circle"></i> Pets Data</a>
+        <a href="#" class="menu-item"><i class="fa fa-credit-card"></i> Income</a>
+        <a href="#" class="menu-item active"><i class="fa fa-file-alt"></i> Article</a>
+        <a href="#" class="menu-item"><i class="fa fa-user-plus"></i> Bread</a>
+        <div class="bottom-profile">
+            <i class="fa fa-user"></i> Profile
+        </div>
+    </div>
+</body>
+</html>
